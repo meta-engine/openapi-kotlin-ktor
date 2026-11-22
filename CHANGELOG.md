@@ -2,6 +2,10 @@
 
 See the [Maven Central version history](https://central.sonatype.com/artifact/eu.metaengine/metaengine-openapi-kotlin-ktor-maven-plugin/versions) for all published versions.
 
+## 1.1.0
+
+- Generate Kotlin Ktor clients for HTTP QUERY operations in OpenAPI 3.2 specifications, including JSON request bodies.
+
 ## 1.0.0
 
 Initial release — generate Kotlin Ktor HTTP client services and models from OpenAPI specifications.

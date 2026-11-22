@@ -19,6 +19,7 @@ A Maven plugin that produces coroutine-based Ktor `HttpClient` service clients a
 
 ## Features
 
+- ✅ **HTTP QUERY** - Generate clients for `QUERY` operations in OpenAPI 3.2, including JSON request bodies
 - ✅ **Ktor HTTP client** - Coroutine-based `suspend fun` service clients with a constructor-injected base URL
 - ✅ **kotlinx.serialization models** - Kotlin `data class` types with `@Serializable`
 - ✅ **Authentication** - Bearer token, basic auth, and custom headers from environment variables
@@ -51,7 +52,7 @@ Add the plugin to your `pom.xml` and bind it to the `generate-sources` phase:
     <plugin>
       <groupId>eu.metaengine</groupId>
       <artifactId>metaengine-openapi-kotlin-ktor-maven-plugin</artifactId>
-      <version>1.0.0</version>
+      <version>1.1.0</version>
       <executions>
         <execution>
           <goals><goal>generate</goal></goals>
@@ -76,7 +77,7 @@ mvn generate-sources
 The plugin can also be run directly without a lifecycle binding:
 
 ```bash
-mvn eu.metaengine:metaengine-openapi-kotlin-ktor-maven-plugin:generate \
+mvn eu.metaengine:metaengine-openapi-kotlin-ktor-maven-plugin:1.1.0:generate \
   -Dmetaengine.inputSpec=src/main/resources/openapi.json \
   -Dmetaengine.packageName=com.example.api
 ```
